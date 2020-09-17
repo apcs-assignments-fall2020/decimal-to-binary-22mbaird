@@ -2,17 +2,18 @@ import java.util.Scanner;
 
 public class MyMain {
     
-    public static int binaryToDecimal(int binary) {
+    public static int binaryToDecimal(String binary) {
+        int bin = Integer.parseInt(binary);
         int dec = 0;  
         int n = 0;  
         while(true){  
-            if(binary == 0){  
+            if(bin == 0){  
         break;  
         } 
         else {  
-            int k = binary%10;  
+            int k = bin%10;  
             dec += k*Math.pow(2, n);  
-            binary = binary/10;  
+            bin = bin/10;  
             n++;  
         }  
     }  
